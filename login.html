@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llogaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<script>
+                function myFunction() {
+                var x = document.getElementById("fname");
+                     x.value = x.value.toUpperCase();
+                     }
+
+                function myFunction2() {
+                document.getElementById("demo").innerHTML = "Sapo u regjistruat";
+}
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://t4.ftcdn.net/jpg/03/58/10/07/360_F_358100720_oV3ineP9ECXiOR98EnkkEpOpS5SxovdS.jpg" alt="" width="125px">                
+            </div>
+            <nav>
+                <ul id="menuitem">
+                    <li><a href="index.html">Faqe kryesore</a></li>
+                    <li><a href="product.html">Produktet</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Kontakt</a></li>
+                    <li><a href="login.html">Llogaria</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" alt="" width="30px">
+            <img src="images/menu.png" alt="" class="menu-icon" id="menutoggle">
+        </div>
+    </div>
+
+        
+    <!-- llogaria -->
+    <div class="account">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" width="100%" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span id="login">Hyrje</span>
+                            <span id="registry">Regjistrohu</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="loginForm">
+                            <input type="text" placeholder="Emri i perdoruesit" id="fname" onblur="myFunction()">
+                            <input type="password" placeholder="Fjalekalimi">
+
+                            <button type="submit" class="btn" id="btnLogin">Login</button>
+                            <a href="">Kam harruar fjalekalimin</a>
+                        </form>
+
+                        <form id="registryForm">
+                            <input type="text" placeholder="Emri i perdoruesit">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Fjalekalimi">
+                            <button type="submit" class="btn" id="btnRegistry" onclick="myFunction2()" >Regjistrohu</button> 
+                            <p id="demo"></p>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footeri -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Shkarko Aplikacionin</h3>
+                    <p>Shkarko aplikacionin per IOS dhe Android</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="https://t4.ftcdn.net/jpg/03/58/10/07/360_F_358100720_oV3ineP9ECXiOR98EnkkEpOpS5SxovdS.jpg" alt="">
+                    <p>Qellimi yne eshte te tregojme klasin tuaj. Ne treg qe prej vitit 2001. Atletet dhe kepucet me cilesore ne treg. Te pa-konkurruar.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Linke te dobishme</h3>
+                    <ul>
+                        <li>Kupona</li>
+                        <li>Postime te vjetra</li>
+                        <li>Rregullorja</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Na ndiqni ne</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - Geri Prifti</p>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $("#login").click(function(){
+        $("#registryForm").css('transform','translateX(300px)');
+        $("#loginForm").css('transform','translateX(300px)');
+        $("#indicator").css('transform','translateX(0px)');
+    });
+    $("#registry").click(function(){
+        $("#registryForm").css('transform','translateX(0px)');
+        $("#loginForm").css('transform','translateX(0px)');
+        $("#indicator").css('transform','translateX(100px)');
+    });
+</script>
+
+</html>
